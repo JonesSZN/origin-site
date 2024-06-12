@@ -1,14 +1,5 @@
 import { MenuIcon } from "lucide-react";
-
-function Header() {
-  return (
-    <header className="w-full fixed z-[999] flex justify-center bg-[#FFF8E8]">
-      <div className="lg:w-[68%] w-[90%] max-w-[1450px]">
-        <Nav />
-      </div>
-    </header>
-  );
-}
+import { Container } from "../components/container";
 
 function Nav() {
   return (
@@ -60,4 +51,14 @@ function NavRight() {
   );
 }
 
-export default Header;
+function Header() {
+  return (
+    <header className="w-full fixed z-[999] flex justify-center bg-[#FFF8E8]">
+      <Container>
+        <Nav />
+      </Container>
+    </header>
+  );
+}
+
+export { Header };

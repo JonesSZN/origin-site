@@ -1,14 +1,5 @@
 import { ChevronDown } from "lucide-react";
-
-const Faq = () => {
-  return (
-    <section className="w-full py-24 flex justify-center bg-[#FFF8E8]">
-      <div className="lg:w-[60%] w-[90%] max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-};
+import { Container } from "../components/container";
 
 const Content = () => {
   return (
@@ -58,7 +49,9 @@ const Right = () => {
 const Top = () => {
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-[#f95533] font-bold text-[14px] text-center">FAQ</h2>
+      <h2 className="text-[#f95533] font-bold text-[14px] lg:text-center">
+        FAQ
+      </h2>
       <p className="text-[#111827] font-bold lg:text-[48px] text-[26px]">
         Frequently asked questions
       </p>
@@ -66,4 +59,14 @@ const Top = () => {
   );
 };
 
-export default Faq;
+const Faq = () => {
+  return (
+    <section className="w-full py-24 flex justify-center bg-[#FFF8E8]">
+      <Container>
+        <Content />
+      </Container>
+    </section>
+  );
+};
+
+export { Faq };

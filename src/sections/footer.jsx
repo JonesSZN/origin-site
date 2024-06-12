@@ -1,12 +1,4 @@
-const footer = () => {
-  return (
-    <footer className="w-full flex py-12 justify-center bg-[#000000] ">
-      <div className="lg:w-[68%] w-[90%] max-w-[1450px]">
-        <FooterContent />
-      </div>
-    </footer>
-  );
-};
+import { Container } from "../components/container";
 
 const FooterContent = () => {
   return (
@@ -140,7 +132,7 @@ function FooterLeftCol3() {
 
 const FooterBottom = () => {
   return (
-    <div className="flex lg:flex-row mt-16 flex-col gap-4 justify-between">
+    <div className="flex lg:flex-row mt-16 flex-col gap-4  justify-between">
       <p className="text-[#FFFFFF8F] text-center">
         Copyright ⓒ Origin Webflow Template. Designed by{" "}
         <span className="text-[#f95533] cursor-pointer hover:text-[#320905] transition-all duration-200">
@@ -162,4 +154,14 @@ const FooterBottom = () => {
   );
 };
 
-export default footer;
+const Footer = () => {
+  return (
+    <footer className="w-full flex py-12 justify-center bg-[#000000] ">
+      <Container>
+        <FooterContent />
+      </Container>
+    </footer>
+  );
+};
+
+export { Footer };

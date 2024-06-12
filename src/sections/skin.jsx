@@ -1,12 +1,4 @@
-function Skin() {
-  return (
-    <section className="w-full py-32 bg-[#FFF8E8] flex justify-center">
-      <div className="lg:w-[68%] w-[90%] max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-}
+import { Container } from "../components/container";
 
 function Content() {
   return (
@@ -88,4 +80,14 @@ function Top() {
   );
 }
 
-export default Skin;
+function Skin() {
+  return (
+    <section className="w-full py-32 bg-[#FFF8E8] flex justify-center">
+      <Container>
+        <Content />
+      </Container>
+    </section>
+  );
+}
+
+export { Skin };

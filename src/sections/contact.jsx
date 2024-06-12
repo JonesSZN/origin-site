@@ -1,13 +1,5 @@
 import { Facebook, Youtube, Instagram } from "lucide-react";
 
-const Contact = () => {
-  return (
-    <section className=" w-full bg-[#E6E7B4]">
-      <Content />
-    </section>
-  );
-};
-
 const Content = () => {
   return (
     <div className="flex lg:flex-row flex-col">
@@ -87,4 +79,12 @@ const SocialIcons = () => {
     </div>
   );
 };
-export default Contact;
+
+const Contact = () => {
+  return (
+    <section className=" w-full bg-[#E6E7B4]">
+      <Content />
+    </section>
+  );
+};
+export { Contact };

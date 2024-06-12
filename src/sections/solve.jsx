@@ -1,12 +1,4 @@
-function Solve() {
-  return (
-    <section className="w-full bg-[#FFF8E8] flex justify-center">
-      <div className="lg:w-[68%] w-[90%] max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-}
+import { Container } from "../components/container";
 
 function Content() {
   return (
@@ -82,4 +74,14 @@ function Top() {
   );
 }
 
-export default Solve;
+function Solve() {
+  return (
+    <section className="w-full bg-[#FFF8E8] flex justify-center">
+      <Container>
+        <Content />
+      </Container>
+    </section>
+  );
+}
+
+export { Solve };

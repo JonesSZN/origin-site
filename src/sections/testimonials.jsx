@@ -1,14 +1,5 @@
 import { ChevronRight, ChevronLeft } from "lucide-react";
-
-const Testimonials = () => {
-  return (
-    <section className="w-full py-24 flex justify-center bg-[#FFF8E8]">
-      <div className="lg:w-full w-[90%] flex justify-center items-center max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-};
+import { Container } from "../components/container";
 
 const Content = () => {
   return (
@@ -111,4 +102,14 @@ const Top = () => {
   );
 };
 
-export default Testimonials;
+const Testimonials = () => {
+  return (
+    <section className="w-full py-24 flex justify-center bg-[#FFF8E8]">
+      <Container className="lg:w-full  flex justify-center items-center">
+        <Content />
+      </Container>
+    </section>
+  );
+};
+
+export { Testimonials };

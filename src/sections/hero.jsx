@@ -1,12 +1,4 @@
-function Hero() {
-  return (
-    <section className="w-full py-44 flex justify-center bg-[#FFF8E8]">
-      <div className="lg:w-[70%] w-[95%] flex justify-center max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-}
+import { Container } from "../components/container";
 
 function Content() {
   return (
@@ -42,4 +34,14 @@ function Buttons() {
   );
 }
 
-export default Hero;
+function Hero() {
+  return (
+    <section className="w-full py-44 flex justify-center bg-[#FFF8E8]">
+      <Container className="flex justify-center">
+        <Content />
+      </Container>
+    </section>
+  );
+}
+
+export { Hero };

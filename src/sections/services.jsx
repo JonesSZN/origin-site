@@ -1,12 +1,4 @@
-const Services = () => {
-  return (
-    <section className="w-full py-44 flex justify-center bg-[#FFF8E8]">
-      <div className="lg:w-[68%] w-[90%] max-w-[1450px]">
-        <Content />
-      </div>
-    </section>
-  );
-};
+import { Container } from "../components/container";
 
 const Content = () => {
   const CARDS = [
@@ -115,4 +107,14 @@ const Button = () => {
   );
 };
 
-export default Services;
+const Services = () => {
+  return (
+    <section className="w-full py-44 flex justify-center bg-[#FFF8E8]">
+      <Container>
+        <Content />
+      </Container>
+    </section>
+  );
+};
+
+export { Services };

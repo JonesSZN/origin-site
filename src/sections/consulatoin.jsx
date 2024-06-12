@@ -1,12 +1,4 @@
-const Consulatoin = () => {
-  return (
-    <section className="w-full py-24 flex justify-center bg-[#E6E7B4]">
-      <div className="max-w-[1450px] lg:w-auto w-[90%] flex justify-center items-center">
-        <Content />
-      </div>
-    </section>
-  );
-};
+import { Container } from "../components/container";
 
 const Content = () => {
   const INPUT_ARRAY = ["Name", "Email address"];
@@ -48,4 +40,14 @@ const Content = () => {
   );
 };
 
-export default Consulatoin;
+const Consulatoin = () => {
+  return (
+    <section className="w-full py-24 flex justify-center bg-[#E6E7B4]">
+      <Container className="flex justify-center items-center">
+        <Content />
+      </Container>
+    </section>
+  );
+};
+
+export { Consulatoin };

@@ -3,6 +3,11 @@
   "homepage": "https://JonesSZN.github.io/origin-site",
   "version": "0.1.0",
   "private": true,
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -43,6 +48,8 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.4",
     "tailwindcss": "^3.4.4"
   }
 }

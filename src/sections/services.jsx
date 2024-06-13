@@ -48,14 +48,14 @@ const Content = () => {
   return (
     <div className="flex flex-col gap-12">
       <Top />
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
         {CARDS.map((card, index) => (
-          <div className="flex flex-col cursor-pointer overflow-hidden group">
+          <div className="group flex cursor-pointer flex-col overflow-hidden">
             <img
               style={{
                 borderTopRightRadius: index === 2 ? "190px" : "",
               }}
-              className="lg:h-[300px] object-cover h-[200px] transition transform group-hover:scale-105 duration-300"
+              className="h-[200px] transform object-cover transition duration-300 group-hover:scale-105 lg:h-[300px]"
               src={card.img}
               alt=""
             />
@@ -63,17 +63,17 @@ const Content = () => {
               style={{
                 backgroundColor: index === 2 ? "#DAEDC9" : "",
               }}
-              className="p-6 h-full bg-[#F8D1AD]"
+              className="h-full bg-[#F8D1AD] p-6"
             >
-              <h2 className="text-[#111827] mb-2 text-[24px]">
+              <h2 className="mb-2 text-[24px] text-[#111827]">
                 {card.heading}
               </h2>
-              <p className="text-[#0000008F] mb-6 text-[14px]">
+              <p className="mb-6 text-[14px] text-[#0000008F]">
                 {card.subheading}
               </p>
-              <div className="flex gap-1 items-center">
-                <p className="text-[#111827] text-[18px]">{card.price}</p>
-                <p className="text-[#0000008F] text-[18px] line-through">
+              <div className="flex items-center gap-1">
+                <p className="text-[18px] text-[#111827]">{card.price}</p>
+                <p className="text-[18px] text-[#0000008F] line-through">
                   {card.discount}
                 </p>
               </div>
@@ -88,9 +88,9 @@ const Content = () => {
 
 const Top = () => {
   return (
-    <div className="flex flex-col   items-center">
-      <h2 className="text-[#f95533] font-bold text-[14px]">OUR SERVICES</h2>
-      <p className="text-[#111827] font-semibold text-center lg:text-[48px] text-[26px] mt-2">
+    <div className="flex flex-col items-center">
+      <h2 className="text-[14px] font-bold text-[#f95533]">OUR SERVICES</h2>
+      <p className="mt-2 text-center text-[26px] font-semibold text-[#111827] lg:text-[48px]">
         Our most popular products
       </p>
     </div>
@@ -99,8 +99,8 @@ const Top = () => {
 
 const Button = () => {
   return (
-    <div className="flex justify-center items-center">
-      <button className="bg-[#f95533] lg:w-auto w-full rounded-full text-white py-4 px-12 hover:bg-[#FB9847] transition-all duration-300">
+    <div className="flex items-center justify-center">
+      <button className="w-full rounded-full bg-[#f95533] px-12 py-4 text-white transition-all duration-300 hover:bg-[#FB9847] lg:w-auto">
         Go to our shop
       </button>
     </div>
@@ -109,7 +109,7 @@ const Button = () => {
 
 const Services = () => {
   return (
-    <section className="w-full py-44 flex justify-center bg-[#FFF8E8]">
+    <section className="flex w-full justify-center bg-[#FFF8E8] py-44">
       <Container>
         <Content />
       </Container>

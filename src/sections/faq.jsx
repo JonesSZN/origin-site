@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { Container } from "../components/container";
+import { useState } from "react";
 
 const Content = () => {
   return (
@@ -21,15 +22,29 @@ const Left = () => {
     "Can I contact your customer service for further assistance or product recommendations?",
     "Can I purchase gift cards?",
   ];
+  const [isOpen, setisOpen] = useState(false)
+  
 
   return (
     <div className="flex flex-col gap-12">
       {LIST_ARR.map((item) => (
         <div className="flex gap-4 cursor-pointer">
-          <ChevronDown color=" #374151" size={20} />
+          <ChevronDown className={`${ 
+            isOpen ? "rotate-180 transition-all duration-300" : "rotate-0 transition-all duration-300"
+          }`}
+            
+          onClick={() => setisOpen(!isOpen)} color=" #374151" size={20} />
+                                    
+
+          <div className="flex flex-col gap-4">
           <p className="text-[#374151] font-semibold text-[16px] max-w-[400px]">
             {item}
           </p>
+          <p className={` ${ 
+            isOpen ? "block" : "hidden"
+          }`}>some text to show</p>
+          </div>
+         
         </div>
       ))}
     </div>

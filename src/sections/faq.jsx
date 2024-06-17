@@ -14,24 +14,14 @@ const Content = () => {
   );
 };
 
-const Left = () => {
-  const LIST_ARR = [
-    "Can I return or exchange products if they don't work for me?",
-    "Are your products cruelty-free and not tested on animals?",
-    "Do you offer any loyalty or rewards program for customers?",
-    "Can I contact your customer service for further assistance or product recommendations?",
-    "Can I purchase gift cards?",
-  ];
-  const [isOpen, setisOpen] = useState(false)
-  
 
-  return (
-    <div className="flex flex-col gap-12">
-      {LIST_ARR.map((item) => (
-        <div className="flex gap-4 cursor-pointer">
+const Dropdown = ({item}) => { 
+  const [isOpen, setisOpen] = useState(false)
+  return ( 
+    <div className="flex gap-4 cursor-pointer">
           <ChevronDown className={`${ 
             isOpen ? "rotate-180 transition-all duration-300" : "rotate-0 transition-all duration-300"
-          }`}
+          }`} 
             
           onClick={() => setisOpen(!isOpen)} color=" #374151" size={20} />
                                     
@@ -46,6 +36,27 @@ const Left = () => {
           </div>
          
         </div>
+  )
+}
+
+
+const Left = () => {
+  const LIST_ARR = [
+    "Can I return or exchange products if they don't work for me?",
+    "Are your products cruelty-free and not tested on animals?",
+    "Do you offer any loyalty or rewards program for customers?",
+    "Can I contact your customer service for further assistance or product recommendations?",
+    "Can I purchase gift cards?",
+  ];
+
+  
+
+  return (
+    <div className="flex flex-col gap-12">
+      {LIST_ARR.map((item) => (
+        <>
+        <Dropdown item={item}/>
+        </>
       ))}
     </div>
   );
